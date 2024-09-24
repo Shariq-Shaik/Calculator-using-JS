@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+
+    <title>Calculator</title>
+  </head>
+  <body>
+        <p id="c1" style="align-items: center;justify-content: center;padding-left:650px ;font-size:40px; padding: auto;"></p>
+
+    <div class="calculator">
+      <input type="text" id="display" placeholder="0" readonly />
+      <div>
+        <button onclick="clearDisplay()">AC</button>
+        <button onclick="deleteLast()">DEL</button>
+        <button onclick="input('%')">%</button>
+        <button class="operator" onclick="input('/')">/</button>
+      </div>
+      <div>
+        <button onclick="input('7')">7</button>
+        <button onclick="input('8')">8</button>
+        <button onclick="input('9')">9</button>
+        <button class="operator" onclick="input('*')">*</button>
+      </div>
+      <div>
+        <button onclick="input('4')">4</button>
+        <button onclick="input('5')">5</button>
+        <button onclick="input('6')">6</button>
+        <button class="operator" onclick="input('-')">-</button>
+      </div>
+      <div>
+        <button onclick="input('1')">1</button>
+        <button onclick="input('2')">2</button>
+        <button onclick="input('3')">3</button>
+        <button class="operator" onclick="input('+')">+</button>
+      </div>
+      <div>
+        <button onclick="input('0')" style="width: 95px;">0</button>
+        <button onclick="input('.')">.</button>
+        <button class="equals" onclick="calculate()">=</button>
+      </div>
+    </div>
+    <script>
+        setInterval(function(){
+            let d = new Date();
+            document.getElementById('c1').innerHTML = d.getHours()+':'+d.getMinutes()+':'+d.getSeconds();
+        },1000);
+      </script>
+  </body>
+  
+</html>
